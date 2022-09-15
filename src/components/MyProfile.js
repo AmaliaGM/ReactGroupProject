@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 function MyProfile() {
-  const [ users, setUsers] = useState([]);
+  const [ missions, setMissions] = useState([]);
   const [ search, setSearch] = useState('');
 
   const URL = 'https://api.spacexdata.com/v3/missions';
@@ -10,7 +10,7 @@ function MyProfile() {
     const response = await fetch(URL);
     const data = await response.json();
     console.log(data)
-    setUsers(data)
+    setMissions(data)
   }
 
   useEffect( () => {
@@ -28,14 +28,13 @@ function MyProfile() {
         </tr>
       </thead>
       <tbody>
-        {users.map( (user) => {
-          <tr key={user.id}>
-            <td>{user.missionName}</td>
-            <td>{user.description}</td>
+        {missions.map( (mission) => {
+          <tr key={mission.id}>
+            <td>{mission.missionName}</td>
+            <td>{mission.description}</td>
           </tr>
         })}
-      </tbody>
-  
+      </tbody>  
     </table>   
   </div>
   )
