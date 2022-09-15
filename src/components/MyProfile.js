@@ -10,30 +10,31 @@ function MyProfile() {
     const response = await fetch(URL);
     const data = await response.json();
     console.log(data)
+    console.log(data[0].mission_id)
     setMissions(data)
   }
 
-  useEffect( () => {
+  useEffect(() => {
     showData();
-
   }, []);
 
   return (
   <div>
     <table className='table table-striped table-hover mt-5 shadow-1g'>
       <thead>
-        <tr>
-        <th>MISSION</th>
-        <th>DESCRIPTION</th>
+        <tr className='tableHead text-white'>
+          <th>MISSION</th>
+          <th>DESCRIPTION</th>
         </tr>
       </thead>
       <tbody>
-        {missions.map( (mission) => {
-          <tr key={mission.id}>
-            <td>{mission.missionName}</td>
-            <td>{mission.description}</td>
-          </tr>
-        })}
+        {missions.map((mission) => (
+          <tr key={mission.mission_id}>
+             <td>{mission.mission_name}</td>
+             <td>{mission.description}</td>
+          </tr>/* [1].description
+          [1].mission_name */
+        ))}
       </tbody>  
     </table>   
   </div>

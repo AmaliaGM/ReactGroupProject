@@ -1,3 +1,20 @@
+.bigNav {
+  display: flex;
+  width: 100%;
+}
+
+.planetIcon {
+  width: 3rem;
+  height: auto;
+  margin: auto;
+}
+
+ul {
+  display: flex;
+  gap: 5%;
+  list-style: none;
+}
+
 .tableHead {
- background-color: black; 
+ background-color: grey; 
 }
