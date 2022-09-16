@@ -18,7 +18,7 @@ function Navigation() {
             <NavLink className="NavMissions" to="/Missions">MISSIONS</NavLink>
           </li>
           <li>
-            <NavLink className="NavMyProfile" to="/MyProfile">MY PROFILE</NavLink>
+            <NavLink className="NavMyProfile" to="/MyProfile">MYPROFILE</NavLink>
           </li>
         </ul>
       </div>
