@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { render } from 'react-dom';
 import { Component } from 'react';
+import Toggle from './HandleClick';
 
 function MyProfile() {
   const [ missions, setMissions] = useState([]);
@@ -20,12 +21,13 @@ function MyProfile() {
     showData();
   }, []);
 
-  const [buttonSelected, setButtonSelected] = useState([]);
+  const [isActive, setIsActive] = useState(false);
 
-  const handleClick = e => {
-    console.log(e.target.value);
+  const handleClick = (e) => {
+/*     if (e.target.id == isActive.id)
+ */    setIsActive(active => !active);
   }
-
+  
   return (
     <div>
       <table className='table table-striped table-hover mt-5 shadow-1g'>
@@ -42,8 +44,10 @@ function MyProfile() {
             <tr key={mission.mission_id}>
               <td className="missionNameTable">{mission.mission_name}</td>
               <td className="missionDescriptionTable">{mission.description}</td>
-              <td><button className="member" type='button'>Not an Active Member</button></td>
-              <td><button className="missionJoin" onClick={handleClick} type="checkbox" value={mission.mission_id}>Join Mission</button></td>
+              <td><button className="member" type='button' value={mission.mission_id}>Not an Active Member</button></td>
+              <td><button className="missionJoin" onClick={handleClick} type="button" value={mission.mission_id} style={{backgroundColor: isActive ? 'salmon' : '',
+              color: isActive ? 'white' : '',
+            }}>{isActive ? 'LEAVE MISSION' : 'JOIN MISSION'}</button></td>
             </tr>
           ))}
         </tbody>  
