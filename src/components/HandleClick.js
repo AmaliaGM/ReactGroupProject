@@ -21,9 +21,9 @@ class Toggle extends React.Component {
       <button type="button" onClick={this.handleClick}>
         const
         {' '}
-        { state }
-        {' '}
-        = this.state;
+    {/*     { state }
+  */}       {' '}
+       const state = this.state;
         {state.isToggleOn ? 'ON' : 'State'}
       </button>
     );
