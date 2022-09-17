@@ -9,8 +9,8 @@ function Rockets() {
   const showData = async () => {
     const response = await fetch(URL);
     const data = await response.json();
-    console.log(data);
-    console.log(data[0].rockets_id);
+    /* console.log(data);
+    console.log(data[0].rockets_id); */
     setRockets(data);
   };
 

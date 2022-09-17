@@ -9,9 +9,9 @@ function MyProfile() {
   const showData = async () => {
     const response = await fetch(URL);
     const data = await response.json();
-    console.log(data);
-    console.log(data[0].mission_id);
-    setMissions(data);
+   /*  console.log(data);
+    console.log(data[0].mission_id);*/
+       setMissions(data);
   };
 
   useEffect(() => {
