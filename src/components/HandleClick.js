@@ -3,9 +3,10 @@ import React from 'react';
 class Toggle extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { isToggleOn: true };
+    /*     const { state } = this;
+    state = { isToggleOn: true };
 
-    // This binding is necessary to make `this` work in the callback
+ */ // This binding is necessary to make `this` work in the callback
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -21,10 +22,9 @@ class Toggle extends React.Component {
       <button type="button" onClick={this.handleClick}>
         const
         {' '}
-    {/*     { state }
-  */}       {' '}
-       const state = this.state;
-        {state.isToggleOn ? 'ON' : 'State'}
+        {' '}
+        {' '}
+        {/* {button.isToggleOn ? 'ON' : 'State'} */}
       </button>
     );
   }

@@ -26,7 +26,7 @@ const initialState = [
   },
 ];
 
-const MissionReducer = (state = initialState, action) => {
+const MissionReducer = (action, state = initialState) => {
   switch (action.type) {
     case DELETE_MISSION:
       return state.filter(({ id }) => id !== action.payload);
