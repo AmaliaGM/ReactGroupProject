@@ -28,13 +28,13 @@ ul {
 }
 
 .tableHead {
- background-color: grey; 
+  background-color: grey;
 }
 
 /* .rocketTableBody {
 } */
 
-.rocketImage { 
+.rocketImage {
   width: 100%;
   height: auto;
   margin-right: 5%;
