@@ -2,16 +2,13 @@ import React, { useState, useEffect } from 'react';
 
 function MyProfile() {
   const [missions, setMissions] = useState([]);
-  //  const [search, setSearch] = useState('');
 
   const URL = 'https://api.spacexdata.com/v3/missions';
 
   const showData = async () => {
     const response = await fetch(URL);
     const data = await response.json();
-   /*  console.log(data);
-    console.log(data[0].mission_id);*/
-       setMissions(data);
+    setMissions(data);
   };
 
   useEffect(() => {
@@ -21,8 +18,8 @@ function MyProfile() {
   const [isActive, setIsActive] = useState(false);
 
   const handleClick = () => {
-    /*     if (e.target.id == isActive.id)
- */ setIsActive((active) => !active);
+    /* if (e.target.id == isActive.id) */
+    setIsActive((active) => !active);
   };
 
   return (

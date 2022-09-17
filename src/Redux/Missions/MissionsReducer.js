@@ -26,14 +26,14 @@ const initialState = [
   },
 ];
 
-const MissionReducer = (action, state = initialState) => {
-  switch (action.type) {
+const MissionReducer = (type, state = initialState) => {
+  switch (type) {
     case DELETE_MISSION:
-      return state.filter(({ id }) => id !== action.payload);
+      return state.filter(({ id }) => id !== type.payload);
     case ADD_MISSION:
-      return [...state, action.payload];
+      return [...state, type.payload];
     case ADD_ALL_MISSION:
-      return [...state, ...action.payload];
+      return [...state, ...type.payload];
     default:
       return state;
   }
