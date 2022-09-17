@@ -26,9 +26,13 @@
   ],
   "settings": {
     "import/resolver": {
-        "typescript": {
-            "alwaysTryTypes": true
+      "webpack": {
+        "config": {
+          "resolve": {
+            "extensions": [".js", ".jsx", ".ts", ".tsx", ".mjs"]
+          }
         }
-    }
-}
+      }
+  }
+  }
 }
