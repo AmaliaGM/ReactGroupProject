@@ -17,9 +17,10 @@ function MyProfile() {
 
   const [isActive, setIsActive] = useState(false);
 
-  const handleClick = () => {
-    /* if (e.target.id == isActive.id) */
-    setIsActive((active) => !active);
+  const handleClick = (e) => {
+    if (isActive.includes(e.target.id)) {
+      setIsActive((active) => !active);
+    }
   };
 
   return (
