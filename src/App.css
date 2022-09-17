@@ -1,0 +1,72 @@
+.bigNav {
+  display: flex;
+  align-items: flex-end;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+a.active {
+  text-decoration: underline;
+}
+
+.planetIcon {
+  width: 3rem;
+  height: auto;
+  margin: 2%;
+}
+
+ul {
+  display: flex;
+  gap: 5%;
+  list-style: none;
+  font-size: 85%;
+  margin-left: 15%;
+  margin-right: 0%;
+}
+
+.tableHead {
+  background-color: grey;
+}
+
+/* .rocketTableBody {
+} */
+
+.rocketImage {
+  width: 100%;
+  height: auto;
+  margin-right: 5%;
+}
+
+.reserveRocketButton {
+  color: white;
+  background-color: rgb(70, 145, 244);
+  border: none;
+  padding: 20px 45px;
+}
+
+.missionNameTable {
+  width: 10%;
+}
+
+.missionDescriptionTable {
+  width: 60%;
+}
+
+.member {
+  padding: 4% 8%;
+  color: white;
+  background-color: rgb(98, 95, 95);
+  font-size: 8px;
+  border: none;
+  margin-top: 40%;
+}
+
+.missionJoin {
+  background-color: transparent;
+  padding: 10% 10%;
+  font-size: 12px;
+  margin-top: 40%;
+}
