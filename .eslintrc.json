@@ -23,5 +23,12 @@
   "ignorePatterns": [
     "dist/",
     "build/"
-  ]
+  ],
+  "settings": {
+    "import/resolver": {
+        "typescript": {
+            "alwaysTryTypes": true
+        }
+    }
+}
 }
